@@ -1,6 +1,7 @@
 package mx.itson.edu.practica3
 
 import android.content.Context
+import android.media.Image
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -38,8 +39,10 @@ class ProductosActivity : AppCompatActivity() {
     }
 
     fun agregarProductos(option:String?) {
+        var title: ImageView = findViewById<ImageView>(R.id.imageView)
         when(option) {
             "Antojitos" -> {
+                title.setImageResource(R.drawable.antojitos)
                 menu.add(Product("Quesadillas", R.drawable.quesadillas, "Rellenas con su carne favorita, servidas con ensalada", 6.29))
                 menu.add(Product("Gringas", R.drawable.gringas, "Tortilla de harina con queso, carne al pastor y piña", 8.39))
                 menu.add(Product("Sopes", R.drawable.sopes, "Tortilla gruesa cubierta de frijoles, tu carne favorita, lechuga, queso fresco y crema", 3.99))
@@ -48,11 +51,13 @@ class ProductosActivity : AppCompatActivity() {
                 menu.add(Product("Tostadas", R.drawable.tostadas, "Tortilla  frita con frijoles, tu carne favorita, lechuga, queso fresco, crema y jitomate.", 4.59))
             }
             "Especialidades" -> {
+                title.setImageResource(R.drawable.especialidades)
                 menu.add(Product("Mojarra Frita", R.drawable.mojarra, "Tilapia frita servida con lechuga, cebolla, jitomate, aguacate y tortillas.", 17.99))
                 menu.add(Product("Ceviche", R.drawable.ceviche, "Tilapia, camarones, aguacate y pico de gallo servido con chips", 6.99))
                 menu.add(Product("Botana de Camarones",R.drawable.botanacamarones, "", 19.99))
             }
             "Combinations" -> {
+                title.setImageResource(R.drawable.combinations)
                 menu.add(Product("Taco Combo Tradicional", R.drawable.combinationtaco, "Tortilla de maíz y tu carne favorita. Servido con arroz y frijoles", 6.99))
                 menu.add(Product("Mexican Burritos", R.drawable.burritos, "Tu carne favorita en una tortilla grande de harina rellena con cebolla frita, pico de gallo, sour crea, frijoles y acompañado de arroz", 13.69))
                 menu.add(Product("Los Portales Burrito", R.drawable.burritosportales, "Tortilla grande de harina rellena de nopal asado, bistec, pastor, cebolla asada, arroz y frijoles. Servida con ensalada de lechuga, tomate, crema agria y guacamole.", 14.59))
@@ -61,6 +66,7 @@ class ProductosActivity : AppCompatActivity() {
                 menu.add(Product("Fajita Quesadilla", R.drawable.fajitaquesadilla, "Quesadilla extra grande (10 inches), rellena con tu carne favorita, cebolla asada, chile morrón. Servida con arroz, frijoles, lechuga, crema y pico de gallo.", 14.59))
             }
             "Tortas" -> {
+                title.setImageResource(R.drawable.tortas)
                 menu.add(
                     Product(
                         "Torta Regular",
@@ -96,6 +102,7 @@ class ProductosActivity : AppCompatActivity() {
                 menu.add(Product("Small Mexican Torta", R.drawable.smallmexican, "Sándwich de pan bollio con tu carne favorita, lechuga rallada, aguacate, tomate, cebolla y crema.", 11.99))
             }
             "Sopas" -> {
+                title.setImageResource(R.drawable.sopas)
                 menu.add(
                     Product(
                         "Caldo de Res",
@@ -138,6 +145,7 @@ class ProductosActivity : AppCompatActivity() {
                 )
             }
             "Drinks" -> {
+                title.setImageResource(R.drawable.drinks)
                 menu.add(Product("Sodas 20 oz", R.drawable.sodas, "Sodas 20 oz", 2.99))
                 menu.add(Product("Jarritos", R.drawable.jarritos, "", 2.75))
                 menu.add(Product("Caguama", R.drawable.caguama, "", 9.99))
